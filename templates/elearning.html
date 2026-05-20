@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-learning - Sandipani Vidyalaya Rahatgarh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+        <h2 class="headerh2">Initiative by Govt of Madhya Pradesh</h2>
+        <h2 class="headerh1">Welcome to Sandipani Vidyalaya Rahatgarh Distt. Sagar MP</h2>
+        <nav class="navigtn">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/academics">Academics</a></li>           
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/teachers">Teachers</a></li>
+                <li><a href="/elearning">E-learning</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            
+            </ul>
+        </nav>
+</header>
+
+    <section>
+        <h2>Online study material</h2>
+      
+     <style>
+        .video {
+            margin-bottom: 20px;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
+        .pagination a {
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        .pagination a.disabled {
+            background-color: #cccccc;
+            pointer-events: none;
+        }
+    </style>
+
+
+    {% for video in videos %}
+        <div class="video">
+            <h3>{{ video.title }}</h3>
+            <img src="{{ video.thumbnail }}" alt="Thumbnail">
+            <p>{{ video.description }}</p>
+            <a href="https://www.youtube.com/watch?v={{ video.videoId }}" target="_blank">Watch on YouTube</a>
+        </div>
+    {% endfor %}
+
+    <div class="pagination">
+        {% if prev_page_token %}
+            <a href="/?pageToken={{ prev_page_token }}">Previous</a>
+        {% else %}
+            <a class="disabled">Previous</a>
+        {% endif %}
+
+        {% if next_page_token %}
+            <a href="/?pageToken={{ next_page_token }}">Next</a>
+        {% else %}
+            <a class="disabled">Next</a>
+        {% endif %}
+    </div>
+        
+ 
+    </section>
+  
+      <div class="banner">
+          "सपने सच करने से पहले आपको सपने देखने होंगे।" – डॉ. ए.पी.जे. अब्दुल कलाम
+        </div>
+    
+    
+    
+    <div class="footer">
+   <footer class="footer">       
+        <p>This page is developped by Umesh Gupta       |                &copy; 2024 Sandipani Vidyalaya Rahatgarh | All Rights Reserved</p>
+    </footer>
+    </div>
+</body>
+</html>

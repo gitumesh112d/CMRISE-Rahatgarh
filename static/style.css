@@ -1,168 +1,227 @@
-/* style.css */
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    margin: 10;
+    padding: 10;
+    background-color: ##f4f4f9;
+    color: #555;
 }
 
-
-/* Basic Styling */
-.basic-image {
+header {
+    background-color: #004d99;
+    padding: 10px 10px;
+     text-align: center;
+     color: white;
  
-    max-width: 60px; /* Adjust size as needed */
-        height: auto;
-}
-
-/* Basic form container styling */
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 70px;
-    border: 3px solid #aaa;
-    border-radius: 10px;
-    background-color: #f1f1f1;
-    box-shadow: 5 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-}
-
-/* Form elements styling */
-.form-container label {
-    display: block;
+     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 1px;
-    color: #333;
 }
 
-.form-container input,
-.form-container select {
+.banner {
     width: 100%;
-    padding: 7px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 10px;
-    box-sizing: border-box;
-}
-
-.form-container input:focus,
-.form-container select:focus {
-    border-color: #007BFF;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Submit button styling */
-.form-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
+    text-align: center;
+    background-color: #004d99;
     color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    padding: 20px;
+    font-size: 15px;
     font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+
+  
+}
+header h1 {
+    margin: 0;
 }
 
-.form-container button:hover {
-    background-color: #0056b3;
-}
-
-
-h1 {
-    color: green;
+.headerh1 {
+    margin: 0;
     text-align: center;
+    font-weight: bold;
+    color: red;
 }
 
-
-h2 {
-    color: green;
-    text-align: center;
+.headerh2 {
+color: red;
+      text-align: left;
+      font-size: 10px;
+      font-weight: bold;
+      color: white;
+    
 }
 
-h3 {
-    color: green;
-    text-align: center;
+.navigtn {
+
+color: red;
+       
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+    
 }
 
-h4 {
-    color: green;
-    text-align: center;
-}
-
-nav {
-    text-align: left;
-    margin-bottom: 10px;
-}
-
-nav a {
-    margin: 0 05px;
-    color: #007bff;
+.intro {
+  color: green; /* Alice Blue */
     text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-/* Table Styling */
-.styled-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 18px;
-    text-align: left;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
-}
-
-/* Header Row */
-.styled-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
     font-weight: bold;
-}
-
-/* Table Cells */
-.styled-table th, 
-.styled-table td {
-    padding: 12px 15px;
-}
-
-/* Zebra Striping for Rows */
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-/* Highlighted Row */
-.styled-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-}
-
-
-
-button, input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
     padding: 10px 15px;
+    transition: all 0.3s ease;
     border-radius: 5px;
-    cursor: pointer;
+    
 }
 
-button:hover, input[type="submit"]:hover {
-    background-color: #0056b3;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
 }
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease; /* Smooth transition effect */
+    border-radius: 2px; /* Rounded corners for the button-like feel */
+}
+
+nav ul li a:hover {
+    background-color: #ffffff; /* Change the background color on hover */
+    color: #004d99; /* Change the text color on hover */
+    text-decoration: underline; /* Optional: Add underline */
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    margin: 10px;
+    max-width: 30%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.contact-form button {
+    background-color: #004d99;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #0066cc;
+}
+
+.teachers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.teacher {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.teacher img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.teacher h3 {
+    margin-top: 10px;
+}
+
+
+.building1 img {
+ 
+      
+        height: auto;
+        border-radius: 10px;
+        width: 100%;
+   
+    
+}
+
+.subject-list  {
+ display: inline;
+ margin: 0 20px;
+    
+}
+
+
+.subject-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .subject-list li {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+            background-color: #f9f9f9;
+        }
+        .subject-list li:hover {
+            background-color: #e0e0e0;
+        }
+        .tab-content {
+            display: none; /* Hide all tabs initially */
+            margin-top: 20px;
+        }
+        .tab-content.active {
+            display: block; /* Show the active tab */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+
 
 .footer {
-    background-color: #ccc;
+    background-color: #aaa;
     text-align: center;
-    padding: 2px;
+    padding: 1px;
+    color: black;
+    font-size: 12px;
 }

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Sandipani Vidyalaya Rahatgarh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+   <header>
+        <h2 class="headerh2">Initiative by Govt of Madhya Pradesh</h2>
+       <h2 class="headerh1">Welcome to Sandipni Vidyalaya Rahatgarh Distt. Sagar MP </h2>
+        <nav class="navigtn">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/academics">Academics</a></li>           
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/teachers">Teachers</a></li>
+                <li><a href="/elearning">E-learning</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <section class="academics">
+        <h2>Education offered</h2>
+        <p>We Offer Primary, Middle, Higher Secondary Education with all subject in higher secondary. Our teachers are highly qualified and well trained in their respective fields</p>
+<div class="subject-list">
+    <ul>
+        <li onclick="showTab('primary-education')">Primary Education</li>
+        <li onclick="showTab('middle-education')">Middle Education</li>
+        <li onclick="showTab('higher-secondary-education')">Higher Secondary Education</li>
+        <li onclick="showTab('computer-education')">Computer Education</li>
+        <li onclick="showTab('ncc')">National Credit Corps (NCC)</li>
+    </ul>
+
+    <h2>Other Services</h2>
+    <p>Overall Development of students is incomplete without Sports, Extra Curricular Activities. Hence we offer:</p>
+    <ul>
+        <li onclick="showTab('cultural-activities')">Cultural Activities</li>
+        <li onclick="showTab('sports')">Sports (Indoor, Outdoor) including Cricket, Badminton</li>
+        <li onclick="showTab('social-activities')">Social Activities</li>
+        <li onclick="showTab('others')">And Many More</li>
+    </ul>
+</div>
+
+        <!-- Tab Content -->
+<div id="primary-education" class="tab-content">
+    <h3>Primary Education</h3>
+    <table>
+        <tr>
+            <th>Grade</th>
+            <th>Subjects</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>1st - 5th</td>
+            <td>English, Math, Science</td>
+            <td>5 years</td>
+        </tr>
+    </table>
+</div>
+
+<div id="middle-education" class="tab-content">
+    <h3>Middle Education</h3>
+    <table>
+        <tr>
+            <th>Grade</th>
+            <th>Subjects</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>6th - 8th</td>
+            <td>English, Math, Science, History</td>
+            <td>3 years</td>
+        </tr>
+    </table>
+</div>
+
+<div id="higher-secondary-education" class="tab-content">
+    <h3>Higher Secondary Education</h3>
+    <table>
+        <tr>
+            <th>Grade</th>
+            <th>Subjects</th>
+            <th>Stream</th>
+        </tr>
+        <tr>
+            <td>9th - 12th</td>
+            <td>Physics, Chemistry, Biology, Art, Commerce</td>
+            <td>Science</td>
+        </tr>
+    </table>
+</div>
+
+<div id="computer-education" class="tab-content">
+    <h3>Computer Education</h3>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Software Covered</th>
+        </tr>
+        <tr>
+            <td>Basic Computer Skills</td>
+            <td>6 months</td>
+            <td>MS Office, Internet</td>
+        </tr>
+    </table>
+</div>
+
+<div id="ncc" class="tab-content">
+    <h3>National Credit Corps (NCC)</h3>
+    <table>
+        <tr>
+            <th>Program</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>Leadership Training</td>
+            <td>2 years</td>
+        </tr>
+    </table>
+</div>
+
+<div id="cultural-activities" class="tab-content">
+    <h3>Cultural Activities</h3>
+    <table>
+        <tr>
+            <th>Activity</th>
+            <th>Frequency</th>
+        </tr>
+        <tr>
+            <td>Dance, Drama</td>
+            <td>Annual</td>
+        </tr>
+    </table>
+</div>
+
+<div id="sports" class="tab-content">
+    <h3>Sports</h3>
+    <table>
+        <tr>
+            <th>Sport</th>
+            <th>Type</th>
+        </tr>
+        <tr>
+            <td>Cricket</td>
+            <td>Outdoor</td>
+        </tr>
+        <tr>
+            <td>Badminton</td>
+            <td>Indoor</td>
+        </tr>
+    </table>
+</div>
+
+<div id="social-activities" class="tab-content">
+    <h3>Social Activities</h3>
+    <table>
+        <tr>
+            <th>Activity</th>
+            <th>Impact</th>
+        </tr>
+        <tr>
+            <td>Community Cleaning</td>
+            <td>Awareness</td>
+        </tr>
+    </table>
+</div>
+
+<div id="others" class="tab-content">
+    <h3>Other Activities</h3>
+    <p>More details will be added soon!</p>
+</div>
+
+<script>
+        function showTab(tabId) {
+// Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+        });
+
+// Show the selected tab
+        document.getElementById(tabId).classList.add('active');
+}
+</script>
+        
+</section>
+
+<div class="banner">
+          "शिक्षा वह निधि है जो हर जगह आपका साथ देती है।" – चाणक्य
+</div>
+    
+<footer class="footer">       
+    <p>This page is developped by Umesh Gupta            |           &copy; 2024 Sandipani Vidyalaya Rahatgarh | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
